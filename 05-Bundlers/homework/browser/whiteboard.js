@@ -1,5 +1,5 @@
-(function () {
-  window.whiteboard = new window.EventEmitter();
+
+  whiteboard = require("./EventEmitter");
 
   // Ultimately, the color of our stroke;
   var color;
@@ -106,4 +106,5 @@
       whiteboard.emit("draw", start, end, strokeColor);
     }
   };
-})();
+
+  module.export = whiteboard;

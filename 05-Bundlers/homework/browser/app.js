@@ -1,5 +1,5 @@
-(function () {
-  var whiteboard = window.whiteboard;
+
+  var whiteboard = require("./whiteboard");
   var socket = window.io(window.location.origin);
 
   socket.on("connect", function () {
@@ -22,4 +22,4 @@
   whiteboard.on("draw", function (start, end, color) {
     socket.emit("draw", start, end, color);
   });
-})();
+
