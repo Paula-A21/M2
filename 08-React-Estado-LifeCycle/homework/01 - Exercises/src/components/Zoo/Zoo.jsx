@@ -7,7 +7,11 @@ import Species from "../Species/Species";
 
 export default function Zoo() {
   /* Escribe acá tu código */
+  let [zoo, setZoo] = useState();
 
+  useEffect(() => {
+    console.log("Me ejecuté al montar el component");
+  }, []);
 
   return (
     <div>
